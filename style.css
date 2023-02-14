@@ -3,13 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+.position {
+  margin: 50px;
+}
 body {
   font-family: sans-serif;
   line-height: 1.5;
 }
 .container {
-  width: 825px;
-  margin: 50px auto;
+  /* width: 825px; */
+  /* margin: 50px auto; */
+  display: flex;
+  gap: 40px;
 }
 .border {
   border: 5px solid black;
@@ -23,30 +28,38 @@ h2 {
 .main-header {
   background-color: #f7f7f7;
   /* margin-top: 20px; */
-  position: relative;
+  /* position: relative; */
+  margin-bottom: 0;
+}
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .price {
   font-size: 24px;
-  position: relative;
+  /* position: relative; */
 }
 .delivery {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
   color: #777;
-  margin-bottom: 20px;
-  position: absolute;
-  margin-top: -25px;
+  /* margin-bottom: 20px; */
+  /* position: absolute; */
+  /* margin-top: -25px; */
   /* margin-right: 900px; */
-  margin-left: 180px;
-  display: inline-block;
+  /* margin-left: 180px; */
+  /* display: inline-block; */
+  /* padding: 0; */
 }
-/* .product-description {
-  display: inline-block;
-} */
-.description {
-  margin-top: 20px;
+.product-description {
   margin-bottom: 10px;
+}
+.description {
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: inline-block;
 }
 /* must always specify all the 4 states and always in this order  */
@@ -58,12 +71,21 @@ a:hover,
 a:active {
   text-decoration: none;
 }
-.more-information {
+.more-info:link,
+.more-info:visited {
+  color: black;
+  margin-bottom: 30px;
   display: inline-block;
 }
+
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+}
+
 .details-title {
   text-transform: uppercase;
-  margin-top: 70px;
+  margin-top: 25px;
   margin-bottom: 15px;
 }
 .details-list {
@@ -76,7 +98,7 @@ li {
 .button-container {
   margin: 0 auto;
   border: black;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .cart-button {
   width: 100%;
@@ -116,75 +138,53 @@ h2::after {
   letter-spacing: 2px;
   /* text-transform: uppercase; */
 }
-ul {
-  list-style: none;
-  display: inline-block;
-  position: relative;
+.product-colors {
+  display: flex;
+  gap: 10px;
 }
-.box li:first-child {
-  border: 5px solid black;
+.color {
   background-color: #000;
-  padding: 5px 5px;
-  position: absolute;
-  bottom: -65px;
-  left: -145px;
-  /* display: inline-block;
-  margin-right: 50px; */
-}
-.box li:nth-child(2) {
-  border: 5px solid blue;
-  background-color: blue;
-  padding: 5px 5px;
-  position: absolute;
-  bottom: -65px;
-  left: -105px;
-}
-.box li:nth-child(3) {
-  border: 5px solid red;
-  background-color: red;
-  padding: 5px 5px;
-  position: absolute;
-  bottom: -65px;
-  left: -65px;
+  height: 22px;
+  width: 22px;
+  /* display: inline-block; */
+  /* replace margin-right with gap */
+  /* margin-right: 10px; */
 }
 
-.box li:nth-child(4) {
-  border: 5px solid hsl(43, 100%, 50%);
-  background-color: hsl(43, 100%, 50%);
-  padding: 5px 5px;
-  position: absolute;
-  bottom: -65px;
-  left: -25px;
+.color-blue {
+  background-color: #2f6ee2;
 }
-.box li:nth-child(5) {
-  border: 5px solid lightgreen;
-  background-color: lightgreen;
-  padding: 5px 5px;
-  position: absolute;
-  bottom: -65px;
-  left: 15px;
+.color-red {
+  background-color: #ec2f2f;
 }
-.box li:last-child {
-  border: 5px solid rgb(148, 90, 15);
-  background-color: rgb(148, 90, 15);
-  padding: 5px 5px;
-  position: absolute;
-  bottom: -65px;
-  left: 55px;
+.color-yellow {
+  background-color: #f0bf1e;
 }
-/* .image {
-} */
+.color-green {
+  background-color: #90cc20;
+}
+.color-brown {
+  background-color: #885214;
+}
 .product {
-  position: absolute;
+  /* position: absolute; */
   /* float: right; */
-  margin-top: -250px;
-  margin-left: 300px;
-  width: 280px;
-  position: relative;
+  flex: 1;
+  /* margin-right: 40px; */
+  margin-top: 20px;
+  /* margin-top: -250px;
+  margin-left: 300px; */
+  /* width: 280px; */
+  /* position: relative; */
+  /* height: 250px; */
 }
 .product-details {
-  width: 200px;
+  /* width: 200px; */
   /* position: absolute; */
-  margin-top: -230px;
-  margin-left: 600px;
+  /* display: inline-block; */
+  flex: 1;
+  /* margin-top: 20px; */
+  align-items: flex-start;
+  /* margin-top: -310px;
+  margin-left: 600px; */
 }
