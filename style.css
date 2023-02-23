@@ -13,8 +13,12 @@ body {
 .container {
   /* width: 825px; */
   /* margin: 50px auto; */
-  display: flex;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 40px; */
+}
+article {
+  width: 850px;
 }
 .border {
   border: 5px solid black;
@@ -31,8 +35,15 @@ h2 {
   /* position: relative; */
   margin-bottom: 0;
 }
-.product-price {
+.main-container {
   display: flex;
+  gap: 30px;
+}
+.product {
+  margin-right: 10px;
+}
+.product-price {
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -48,9 +59,9 @@ h2 {
   color: #777;
   /* margin-bottom: 20px; */
   /* position: absolute; */
-  /* margin-top: -25px; */
+  margin-top: -25px;
   /* margin-right: 900px; */
-  /* margin-left: 180px; */
+  margin-left: 150px;
   /* display: inline-block; */
   /* padding: 0; */
 }
@@ -60,7 +71,7 @@ h2 {
 .description {
   margin-top: 5px;
   margin-bottom: 5px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 /* must always specify all the 4 states and always in this order  */
 a:link,
@@ -141,6 +152,7 @@ h2::after {
 .product-colors {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 .color {
   background-color: #000;
@@ -187,4 +199,5 @@ h2::after {
   align-items: flex-start;
   /* margin-top: -310px;
   margin-left: 600px; */
+  padding-right: 20px;
 }
